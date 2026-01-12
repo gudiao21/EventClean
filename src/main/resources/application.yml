@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: EventClean
+  datasource:
+    url: jdbc:postgresql://localhost:5431/EventCleanlean
+    username: postgres
+    password: postgres # Configure com a sua senha do PostgreSQL
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update # Útil para desenvolvimento inicial; considere usar 'validate' com Flyway em produção
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  flyway:
+    enabled: true # O Flyway está no pom.xml, então é bom deixá-lo explícito
