@@ -31,3 +31,7 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Logs ###
+startup_log.txt
+startup_log_verified.txt
