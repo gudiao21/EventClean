@@ -11,27 +11,29 @@ public class Event {// Declaram os atributos (também chamados de campos, variá
                     // encapsulamento). Para que outras classes leiam ou alterem esses valores, elas
                     // precisam usar os métodos públicos que criamos (os Getters e Setters).
 
-    private Long id; 
+    private Long id;
     private String nome;
     private String descricao;
     private String identificador;
     private LocalDateTime dataInicio;
     private LocalDateTime dataFim;
-    private String local;
+    private String localEvento;
     private Long capacidade;
+    private String organizador;
     private EventoTipo tipo;
 
     public Event(Long id, String nome, String descricao, LocalDateTime inicio, LocalDateTime fim, String identificador, String local,
-            Long capacidade, EventoTipo tipo) { // Da linha 16 a 26 é o construtor.
+            Long capacidade, String organizador, EventoTipo tipo) { // Da linha 16 a 26 é o construtor.
         this.nome = nome;
         this.descricao = descricao;
         this.dataInicio = inicio;
         this.dataFim = fim;
         this.identificador = identificador;
-        this.local = local;
+        this.localEvento = local;
         this.capacidade = capacidade;
+        this.organizador = organizador;
         this.tipo = tipo;
-    }
+} // Fim do construtor.
 
     public String getNome() {
         return nome;
@@ -73,12 +75,12 @@ public class Event {// Declaram os atributos (também chamados de campos, variá
         this.identificador = identificador;
     }
 
-    public String getLocal() {
-        return local;
+    public String getLocalEvento() {
+        return localEvento;
     }
 
-    public void setLocal(String local) {
-        this.local = local;
+    public void setLocalEvento(String localEvento) {
+        this.localEvento = localEvento;
     }
 
     public Long getCapacidade() {
@@ -89,8 +91,12 @@ public class Event {// Declaram os atributos (também chamados de campos, variá
         this.capacidade = capacidade;
     }
 
-    public EventoTipo getTipo() {
-        return tipo;
+    public String getOrganizador() {
+        return organizador;
+    }
+
+    public void setOrganizador(String organizador) {
+        this.organizador = organizador;
     }
 
     public void setTipo(EventoTipo tipo) {
